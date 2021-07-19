@@ -22,22 +22,22 @@
     .leftSection {border-radius: 25px; width: 400px; height: 400px; float: left;width: 350px; height: 350px;
     margin:25px;}
     .rightSection {background-color: teal; border-radius: 25px; width: 350px; height: 350px; float: left;margin:25px}
-    .bill {height:100px;width:350px; float: left;border:1px solid black;}
-    .tip {height:150px;width:350px; float: left;border:1px solid black;}
-    .people {height:100px;width:350px; float: left;border:1px solid black;}
+    .bill {height:100px;width:350px; float: left;}
+    .tip {height:150px;width:350px; float: left;}
+    .people {height:100px;width:350px; float: left;}
     .divTitle {float:left;width:330px;margin:5px;margin-left:20px;font-family: spaceMonoFont;
     font-weight: 700;font-size: 15px;color: hsl(183, 100%, 15%);}
     .billInputWrapper {width: 330px;height:40px; margin:5px;margin-left:20px;float:left;border-radius: 5px;
     background-color: hsl(189, 41%, 97%); }
     .dollarSymbol {width:20px; height:40px; float: left;margin: 10px;}
-    .billInput {width:280px; height:40px;float:left;border: none;background-color: transparent;text-align: right;}
+    .inputBox {width:280px; height:40px;float:left;border: none;background-color: transparent;text-align: right;}
 
     .TipSelectorWrapper {width:330px; height:100px; float: left;margin:5px; margin-left: 20px;}
     .TipBox {width:95px; height:30px; margin-right:10px;margin-bottom: 10px; border: 1px solid black;float:left;
     text-align: center;padding-top:5px; border-radius: 5px;background-color: #00474B;color:white;font-family: spaceMonoFont;
     font-weight: 700;cursor: pointer;}
     .CustomBox {background-color: hsl(189, 41%, 97%);color: hsl(183, 100%, 15%);}
-    .TipBox:hover {background-color: hsl(185, 41%, 84%);}
+    .TipBox:hover {background-color:#9FE8DF; color:hsl(183, 100%, 15%);}
   </style>
 </head>
 <body>
@@ -49,7 +49,7 @@
         <div class="dollarSymbol">
           <img src = "images/icon-dollar.svg" alt="Dollor"/>
         </div>
-        <input type="text" value="" class="billInput"></input>
+        <input type="text" value="" class="billInput inputBox"></input>
       </div> 
     </div>
     <div class="tip">
@@ -64,7 +64,14 @@
       </div>
     </div>
     <div class="people">
-      Number of People
+      <span class="peopleTitle divTitle">Number of People</span>
+      <div class="billInputWrapper">
+        <div class="dollarSymbol">
+          <img src = "images/icon-person.svg" alt="Number of People"/>
+        </div>
+        <input type="text" value="" class="peopleInput inputBox"></input>
+      </div> 
+      
     </div>
   </section>
   <section class="rightSection">
