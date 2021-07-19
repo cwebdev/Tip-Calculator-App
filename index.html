@@ -19,40 +19,57 @@
     .attribution a { color: hsl(228, 45%, 44%); }
     .container {width: 800px; height: 400px; border: 1px solid white;border-radius: 25px;
        display: block; background-color: white }
-    .leftSection {border-radius: 25px; width: 400px; height: 400px; float: left;width: 350px; height: 350px;margin:25px}
+    .leftSection {border-radius: 25px; width: 400px; height: 400px; float: left;width: 350px; height: 350px;
+    margin:25px;}
     .rightSection {background-color: teal; border-radius: 25px; width: 350px; height: 350px; float: left;margin:25px}
     .bill {height:100px;width:350px; float: left;border:1px solid black;}
     .tip {height:150px;width:350px; float: left;border:1px solid black;}
     .people {height:100px;width:350px; float: left;border:1px solid black;}
-    .billTitle {float:left;width:350px;margin:5px;margin-left:20px;font-family: spaceMonoFont;font-weight: 700;font-size: 24px;color: hsl(183, 100%, 15%);}
-    .billInputWrapper {width: 300px;height:40px; margin:5px;margin-left:20px;float:left;border-radius: 5px;
+    .divTitle {float:left;width:330px;margin:5px;margin-left:20px;font-family: spaceMonoFont;
+    font-weight: 700;font-size: 15px;color: hsl(183, 100%, 15%);}
+    .billInputWrapper {width: 330px;height:40px; margin:5px;margin-left:20px;float:left;border-radius: 5px;
     background-color: hsl(189, 41%, 97%); }
-    .dollarSymbol {width:40px; height:40px; float: left;margin: 10px;}
-    .billInput {width:225px; height:40px;float:left;border: none;background-color: transparent;text-align: right;}
+    .dollarSymbol {width:20px; height:40px; float: left;margin: 10px;}
+    .billInput {width:280px; height:40px;float:left;border: none;background-color: transparent;text-align: right;}
+
+    .TipSelectorWrapper {width:330px; height:100px; float: left;margin:5px; margin-left: 20px;}
+    .TipBox {width:95px; height:30px; margin-right:10px;margin-bottom: 10px; border: 1px solid black;float:left;
+    text-align: center;padding-top:5px; border-radius: 5px;background-color: #00474B;color:white;font-family: spaceMonoFont;
+    font-weight: 700;cursor: pointer;}
+    .CustomBox {background-color: hsl(189, 41%, 97%);color: hsl(183, 100%, 15%);}
+    .TipBox:hover {background-color: hsl(185, 41%, 84%);}
   </style>
 </head>
 <body>
 <div class="container">
-  <div class="leftSection">
+  <section class="leftSection">
     <div class="bill">
-      <span class="billTitle">Bill</span>
+      <span class="billTitle divTitle">Bill</span>
       <div class="billInputWrapper">
         <div class="dollarSymbol">
           <img src = "images/icon-dollar.svg" alt="Dollor"/>
         </div>
-        <input type="text" value="test" class="billInput"></input>
+        <input type="text" value="" class="billInput"></input>
       </div> 
     </div>
     <div class="tip">
-      Select Tip
+      <span class="tipTitle divTitle">Select Tip %</span>
+      <div class="TipSelectorWrapper">
+        <div class="TipBox">5%</div>
+        <div class="TipBox">10%</div>
+        <div class="TipBox">15%</div>
+        <div class="TipBox">25%</div>
+        <div class="TipBox">50%</div>
+        <div class="TipBox CustomBox">Custom</div>
+      </div>
     </div>
     <div class="people">
       Number of People
     </div>
-  </div>
-  <div class="rightSection">
+  </section>
+  <section class="rightSection">
 
-  </div>
+  </section>
 </div>
 
   <!--
