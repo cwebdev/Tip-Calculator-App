@@ -2,46 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Tip calculator app</title>
-  
-  <style>
-    @font-face {
-      font-family: spaceMonoFont;
-      src: url(fonts/SpaceMono-Regular.ttf);
-    }
-
-    body {background-color: hsl(172, 67%, 45%);}
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-    .container {width: 800px; height: 400px; border: 1px solid white;border-radius: 25px;
-       display: block; background-color: white }
-    .leftSection {border-radius: 25px; width: 400px; height: 400px; float: left;width: 350px; height: 350px;
-    margin:25px;}
-    .rightSection {background-color: teal; border-radius: 25px; width: 350px; height: 350px; float: left;margin:25px}
-    .bill {height:100px;width:350px; float: left;}
-    .tip {height:150px;width:350px; float: left;}
-    .people {height:100px;width:350px; float: left;}
-    .divTitle {float:left;width:330px;margin:5px;margin-left:20px;font-family: spaceMonoFont;
-    font-weight: 700;font-size: 15px;color: hsl(183, 100%, 15%);}
-    .billInputWrapper {width: 330px;height:40px; margin:5px;margin-left:20px;float:left;border-radius: 5px;
-    background-color: hsl(189, 41%, 97%); }
-    .dollarSymbol {width:20px; height:40px; float: left;margin: 10px;}
-    .inputBox {width:280px; height:40px;float:left;border: none;background-color: transparent;text-align: right;}
-
-    .TipSelectorWrapper {width:330px; height:100px; float: left;margin:5px; margin-left: 20px;}
-    .TipBox {width:95px; height:30px; margin-right:10px;margin-bottom: 10px; border: 1px solid black;float:left;
-    text-align: center;padding-top:5px; border-radius: 5px;background-color: #00474B;color:white;font-family: spaceMonoFont;
-    font-weight: 700;cursor: pointer;}
-    .CustomBox {background-color: hsl(189, 41%, 97%);color: hsl(183, 100%, 15%);}
-    .TipBox:hover {background-color:#9FE8DF; color:hsl(183, 100%, 15%);}
-  </style>
+  <link rel="stylesheet" href="style/style.css"> 
 </head>
 <body>
-<div class="container">
+<div class="flex-container">
   <section class="leftSection">
     <div class="bill">
       <span class="billTitle divTitle">Bill</span>
