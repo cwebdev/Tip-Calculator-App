@@ -113,20 +113,19 @@ body {
 
 .TipSelectorWrapper {
 	width: 330px;
-	height: 100px;
 	float: left;
 	margin: 5px;
 }
 
 .TipBox {
-	width: 95px;
+	width: 30.3%;
 	height: 30px;
-	margin-right: 10px;
 	margin-bottom: 10px;
 	border: 1px solid transparent;
 	float: left;
 	text-align: center;
 	padding-top: 5px;
+    margin: 1%;
 	border-radius: 5px;
 	background-color: #00474B;
 	color: white;
@@ -150,23 +149,26 @@ body {
 	color: hsl(183, 100%, 15%);
 }
 
-.rightSection {
-	background-color: #00474B;
+.rightSectionOuterWrapper
+{
+    background-color: #00474B;
 	border-radius: 25px;
 	padding: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    margin:5%;
 }
 
 .rightSectionDivWrapper {
 	height: 80px;
-	display: flex;
-	flex-wrap: nowrap;
-	margin: 10px
 }
 
 .rightSectionDivWrapper .description {
 	padding: 10px;
-	width: 150px;
+	width: 50%;
+    height: 100px;
 	padding-top: 25px;
+    float: left;
 }
 
 .rightSectionDivWrapper .description span {
@@ -187,12 +189,15 @@ body {
 	font-weight: 700;
 	font-size: 35px;
 	color: #28C1AD;
-	width: 165px;
-	padding-top: 15px
+	width: 50%;
+    height:100px;
+	padding-top: 15px;
+    float:left;
+    padding-right:3%;
 }
 
 .resetBtnWrapper {
-	height: 100px
+	height: 125px;
 }
 
 .resetBtn {
