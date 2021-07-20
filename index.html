@@ -15,68 +15,75 @@
   <script src="scripts/script.js"></script>
 </head>
 <body>
-<section class="titleSection">
-  SPLITTER
-</section>
-<div class="flex-container">
-  <section class="leftSection">
-    <div class="bill">
-      <span class="billTitle divTitle">Bill</span>
-      <div class="billInputWrapper">
-        <div class="dollarSymbol">
-          <img src = "images/icon-dollar.svg" alt="Dollor"/>
-        </div>
-        <input type="number" value="" class="billInput inputBox"></input>
-      </div> 
-    </div>
-    <div class="tip">
-      <span class="tipTitle divTitle">Select Tip %</span>
-      <div class="TipSelectorWrapper">
-        <div class="TipBox FixedTipBox" percentage="5">5%</div>
-        <div class="TipBox FixedTipBox" percentage="10">10%</div>
-        <div class="TipBox FixedTipBox" percentage="15">15%</div>
-        <div class="TipBox FixedTipBox" percentage="25">25%</div>
-        <div class="TipBox FixedTipBox" percentage="50">50%</div>
-        <div class="TipBox CustomBox">Custom</div>
-      </div>
-    </div>
-    <div class="people">
-      <span class="peopleTitle divTitle">Number of People</span>
-      <div class="billInputWrapper">
-        <div class="dollarSymbol">
-          <img src = "images/icon-person.svg" alt="Number of People"/>
-        </div>
-        <input type="text" value="" class="peopleInput inputBox"></input>
-      </div> 
-      
-    </div>
-  </section>
-  <section class="rightSection">
-    <div class="tipAmountWrapper rightSectionDivWrapper">
-      <div class="description">
-        <span>Tip Amount</span>
-        <span class="personText">/person</span>
-      </div>
-      <div class="amount">$0.00</div>
-    </div>
-    <div class="totalWrapper rightSectionDivWrapper">
-      <div class="description">
-        <span>Total</span>
-        <span class="personText">/person</span>
-      </div>
-      <div class="amount">$0.00</div>
-    </div>
-    <div class="resetBtnWrapper">
-      <button class="resetBtn">Reset</button>
-    </div>
-  </section>
-</div>
+  <div class="row">
+    <section class="titleSection">
+      SPLITTER
+    </section>
+  </div>
 
-  
+<div class="row col-12">
+  <div class="col-2"></div>
+  <div class="maincontainer col-8">
+    <section class="leftSection col-6">
+      <div class="leftSectionInnerWrapper">
+        <div class="bill col-4">
+          <span class="billTitle divTitle col-4">Bill</span>
+          <div class="billInputWrapper col-4">
+            <div class="dollarSymbol">
+              <img src = "images/icon-dollar.svg" alt="Dollor"/>
+            </div>
+            <input type="number" value="" class="billInput inputBox"></input>
+          </div> 
+        </div>
+        <div class="tip col-4">
+          <span class="tipTitle divTitle col-4">Select Tip %</span>
+          <div class="TipSelectorWrapper col-4">
+            <div class="TipBox FixedTipBox" percentage="5">5%</div>
+            <div class="TipBox FixedTipBox" percentage="10">10%</div>
+            <div class="TipBox FixedTipBox" percentage="15">15%</div>
+            <div class="TipBox FixedTipBox" percentage="25">25%</div>
+            <div class="TipBox FixedTipBox" percentage="50">50%</div>
+            <div class="TipBox CustomBox">Custom</div>
+          </div>
+        </div>
+        <div class="people col-4">
+          <span class="peopleTitle divTitle col-4">Number of People</span>
+          <div class="billInputWrapper col-4">
+            <div class="dollarSymbol">
+              <img src = "images/icon-person.svg" alt="Number of People"/>
+            </div>
+            <input type="text" value="" class="peopleInput inputBox"></input>
+          </div> 
+        </div>
+      </div>
+    </section>
+    <section class="rightSection col-6">
+      <div class="tipAmountWrapper rightSectionDivWrapper col-4">
+        <div class="description col-2">
+          <span>Tip Amount</span>
+          <span class="personText">/person</span>
+        </div>
+        <div class="amount col-2">$0.00</div>
+      </div>
+      <div class="totalWrapper rightSectionDivWrapper col-4">
+        <div class="description col-2">
+          <span>Total</span>
+          <span class="personText">/person</span>
+        </div>
+        <div class="amount col-2">$0.00</div>
+      </div>
+      <div class="resetBtnWrapper col-4">
+        <button class="resetBtn">Reset</button>
+      </div>
+    </section>
+  </div>
+  <div class="col-2"></div>
+</div>
+<div class="row col-12">
   <div class="attribution">
     <span>Coded by <a href="https://www.frontendmentor.io/profile/cwebdev" target="_blank">Chitrang Shah</a>.</span>
     <span>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</span>
   </div>
- 
+ </div>
 </body>
 </html>

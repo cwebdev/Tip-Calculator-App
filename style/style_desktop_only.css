@@ -3,46 +3,28 @@
 	src: url(../fonts/SpaceMono-Regular.ttf);
 }
 
-* {
-    box-sizing: border-box;
-}
-
-/* For disabling spin box for number input */
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button
-{
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-/* Firefox */
-input[type=number]
-{
-    -moz-appearance: textfield;
-}
-
 body {
 	background-color: #C5E4E7
 }
 
-
-
 .titleSection {
+	width: 100%;
 	height: 100px;
+	margin: auto;
 	font-family: spaceMonoFont;
 	font-weight: 700;
 	font-size: 55px;
 	text-align: center;
 	padding-top: 25px;
-    margin-bottom: 25px;
 }
 
-.maincontainer {    
+.flex-container {
+	display: flex;
+	flex-wrap: wrap;
 	border: 1px solid white;
 	border-radius: 25px;
 	background-color: white;
-	width: 50%;
+	width: 800px;
 	position: relative;
 	margin: 0 auto;
 	top: 25%;
@@ -50,32 +32,45 @@ body {
 
 .leftSection {
 	border-radius: 25px;
+	width: 400px;
+	float: left;
+	width: 350px;
+	height: 350px;
+	margin: 25px;
 }
 
-.leftSectionInnerWrapper
-{
-    margin:5%;
+.rightSection {
+	background-color: #00474B;
+	border-radius: 25px;
+	width: 350px;
+	height: 350px;
+	float: left;
+	margin: 25px
 }
 
 .bill {
 	height: 100px;
-	width: 100%;
+	width: 350px;
+	float: left;
 }
 
 .tip {
 	height: 150px;
-	width: 100%;
+	width: 350px;
+	float: left;
 }
 
 .people {
 	height: 100px;
-	width: 100%;
+	width: 350px;
+	float: left;
 }
 
 .divTitle {
 	float: left;
-	width: 100%;
+	width: 330px;
 	margin: 5px;
+	margin-left: 20px;
 	font-family: spaceMonoFont;
 	font-weight: 700;
 	font-size: 15px;
@@ -83,23 +78,24 @@ body {
 }
 
 .billInputWrapper {
-	width: 100%;
+	width: 330px;
 	height: 40px;
 	margin: 5px;
+	margin-left: 20px;
 	float: left;
 	border-radius: 5px;
 	background-color: hsl(189, 41%, 97%);
 }
 
 .dollarSymbol {
-	width: 5%;
+	width: 20px;
 	height: 40px;
 	float: left;
 	margin: 10px;
 }
 
 .inputBox {
-	width: 90%;
+	width: 280px;
 	height: 40px;
 	float: left;
 	border: none;
@@ -116,6 +112,7 @@ body {
 	height: 100px;
 	float: left;
 	margin: 5px;
+	margin-left: 20px;
 }
 
 .TipBox {
@@ -148,12 +145,6 @@ body {
 .TipBox:hover {
 	background-color: #9FE8DF;
 	color: hsl(183, 100%, 15%);
-}
-
-.rightSection {
-	background-color: #00474B;
-	border-radius: 25px;
-	padding: 2%;
 }
 
 .rightSectionDivWrapper {
@@ -219,48 +210,3 @@ body {
 .attribution a {
 	color: hsl(228, 45%, 44%);
 }
-
-
-
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-
-/* For mobile phones: */
-[class*="col-"] {
-    width: 100%;
-  }
-  
-  @media only screen and (min-width: 600px) {
-    /* For tablets: */
-    .col-s-1 {width: 8.33%;}
-    .col-s-2 {width: 16.66%;}
-    .col-s-3 {width: 25%;}
-    .col-s-4 {width: 33.33%;}
-    .col-s-5 {width: 41.66%;}
-    .col-s-6 {width: 50%;}
-    .col-s-7 {width: 58.33%;}
-    .col-s-8 {width: 66.66%;}
-    .col-s-9 {width: 75%;}
-    .col-s-10 {width: 83.33%;}
-    .col-s-11 {width: 91.66%;}
-    .col-s-12 {width: 100%;}
-  }
-  
-  @media only screen and (min-width: 768px) {
-    /* For desktop: */
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
-  }

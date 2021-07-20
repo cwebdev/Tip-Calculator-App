@@ -10,7 +10,7 @@ function UpdateCalculations()
     && totalPersons != 0)
     {
         tipPerPerson = (billAmount * tipPercentage / 100) / totalPersons;
-        totalPerPerson = billAmount / totalPersons;
+        totalPerPerson = (billAmount / totalPersons) + tipPerPerson;
     }
 
     $('.tipAmountWrapper .amount').html("$" + tipPerPerson.toFixed(2));
