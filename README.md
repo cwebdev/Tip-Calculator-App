@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://cwebdev.github.io/Tip-Calculator-App/)
-- Live Site URL: [Add live site URL here](https://cwebdev.github.io/Tip-Calculator-App/)
+- Solution URL: [https://cwebdev.github.io/Tip-Calculator-App/](https://cwebdev.github.io/Tip-Calculator-App/)
+- Live Site URL: [https://cwebdev.github.io/Tip-Calculator-App/](https://cwebdev.github.io/Tip-Calculator-App/)
 
 ## My process
 
@@ -42,8 +42,6 @@ Users should be able to:
 - Semantic HTML5 markup
 - Flexbox
 - Mobile-first workflow
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
 
 ### What I learned
 

@@ -25,20 +25,21 @@
     font-family: spaceMonoFont; font-weight: 700; font-size:25px;color:hsl(183, 100%, 15%);}
 
   .TipSelectorWrapper {width:330px; height:100px; float: left;margin:5px; margin-left: 20px;}
-  .TipBox {width:95px; height:30px; margin-right:10px;margin-bottom: 10px; border: 1px solid black;float:left;
+  .TipBox {width:95px; height:30px; margin-right:10px;margin-bottom: 10px; border: 1px solid transparent;float:left;
   text-align: center;padding-top:5px; border-radius: 5px;background-color: #00474B;color:white;font-family: spaceMonoFont;
   font-weight: 700;cursor: pointer;}
+  .TipBox.active-Box {background-color: #9FE8DF;color:hsl(183, 100%, 15%)}
   .CustomBox {background-color: hsl(189, 41%, 97%);color: hsl(183, 100%, 15%);}
   .TipBox:hover {background-color:#9FE8DF; color:hsl(183, 100%, 15%);}
 
   .rightSectionDivWrapper {height: 80px;display: flex;flex-wrap: nowrap;margin:10px}
   .rightSectionDivWrapper .description {padding:10px; width:150px; padding-top: 25px;}
   .rightSectionDivWrapper .description span {font-family: spaceMonoFont;color:white;font-size:15px;display: block;}
-  .rightSectionDivWrapper .description .personText {color: hsl(183, 100%, 15%); font-size: 13px;}
+  .rightSectionDivWrapper .description .personText {color: #28C1AD; font-size: 13px;}
   .rightSectionDivWrapper .amount {text-align: right;font-family: spaceMonoFont; font-weight: 700; font-size:35px;
   color: #28C1AD; width:165px;padding-top:15px}
   
-  .resetBtnWrapper {height: 150px}
+  .resetBtnWrapper {height: 100px}
   .resetBtn {height:50px; width:300px; background-color:#28C1AD;color:hsl(183, 100%, 15%); border-radius: 5px;
     font-family: spaceMonoFont; font-weight: 700; font-size:25px;margin:auto;cursor: pointer;display: block;margin-top:75px; }
 

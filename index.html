@@ -10,6 +10,9 @@
   <style>
   
   </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script src="scripts/script.js"></script>
 </head>
 <body>
 <section class="titleSection">
@@ -23,17 +26,17 @@
         <div class="dollarSymbol">
           <img src = "images/icon-dollar.svg" alt="Dollor"/>
         </div>
-        <input type="text" value="" class="billInput inputBox"></input>
+        <input type="number" value="" class="billInput inputBox"></input>
       </div> 
     </div>
     <div class="tip">
       <span class="tipTitle divTitle">Select Tip %</span>
       <div class="TipSelectorWrapper">
-        <div class="TipBox">5%</div>
-        <div class="TipBox">10%</div>
-        <div class="TipBox">15%</div>
-        <div class="TipBox">25%</div>
-        <div class="TipBox">50%</div>
+        <div class="TipBox FixedTipBox" percentage="5">5%</div>
+        <div class="TipBox FixedTipBox" percentage="10">10%</div>
+        <div class="TipBox FixedTipBox" percentage="15">15%</div>
+        <div class="TipBox FixedTipBox" percentage="25">25%</div>
+        <div class="TipBox FixedTipBox" percentage="50">50%</div>
         <div class="TipBox CustomBox">Custom</div>
       </div>
     </div>
@@ -54,14 +57,14 @@
         <span>Tip Amount</span>
         <span class="personText">/person</span>
       </div>
-      <div class="amount">$4.27</div>
+      <div class="amount">$0.00</div>
     </div>
     <div class="totalWrapper rightSectionDivWrapper">
       <div class="description">
         <span>Total</span>
         <span class="personText">/person</span>
       </div>
-      <div class="amount">$32.79</div>
+      <div class="amount">$0.00</div>
     </div>
     <div class="resetBtnWrapper">
       <button class="resetBtn">Reset</button>
@@ -69,14 +72,11 @@
   </section>
 </div>
 
-  <!--
-
-  Reset
   
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/cwebdev/Tip-Calculator-App">Chitrang Shah</a>.
+    <span>Coded by <a href="https://www.frontendmentor.io/profile/cwebdev" target="_blank">Chitrang Shah</a>.</span>
+    <span>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</span>
   </div>
-  -->
+ 
 </body>
 </html>
