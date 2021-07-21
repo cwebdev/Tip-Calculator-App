@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <!-- displays site properly based on user's device -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Author: Chitrang Shah, A tip calculator app that can 
+    calculate tips and total for a group of people based on bill amount.">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Tip calculator app</title>
   <link rel="stylesheet" href="style/style.css"> 
@@ -15,7 +17,7 @@
   <header>
     <div class="row col-12">
       <section class="titleSection">
-        <h3>SPLITTER</h3>
+        <h1>SPLITTER</h1>
       </section>
     </div>
   </header>
@@ -31,8 +33,8 @@
                 <div class="Symbol">
                   <img src = "images/icon-dollar.svg" alt="Dollor" width="11" height="17"/>
                 </div>
-                <label for="id_billInput" class="no-display">Bill</label>                
-                <input type="number" value="" id="id_billInput" class="billInput js-billInput inputBox"></input>
+                <input type="number" value="" id="id_billInput" class="billInput js-billInput inputBox">
+                <label for="id_billInput" class="no-display">Bill</label>
               </div> 
             </div>
             <div class="tip col-s-12">
@@ -45,8 +47,8 @@
                 <div class="TipBox js-TipBox FixedTipBox" percentage="50">50%</div>
                 <div class="TipBox js-TipBox CustomBox js-CustomBox">
                   <span class="CustomBoxText js-CustomBoxText">Custom</span>
-                  <label for="id_customTipInput" class="no-display">Custom Tip</label> 
-                  <input type="number" id="id_customTipInput" class="CustomInputBox js-CustomInputBox" label="customTipInputLabel"/>
+                  <input type="number" id="id_customTipInput" class="CustomInputBox js-CustomInputBox">
+                  <label for="id_customTipInput" class="no-display">Custom Tip</label>
                 </div>
               </div>
             </div>
@@ -60,7 +62,7 @@
                   <img src = "images/icon-person.svg" alt="Number of People" width="13" height="16"/>
                 </div>
                 <label for="id_peopleInput" class="no-display">Number of People</label> 
-                <input type="text" value="" id="id_peopleInput" class="peopleInput js-peopleInput inputBox" label="peopleInputLabel"></input>
+                <input type="text" value="" id="id_peopleInput" class="peopleInput js-peopleInput inputBox">
               </div> 
             </div>
           </div>

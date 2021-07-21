@@ -1,11 +1,11 @@
 @font-face {
 	font-family: spaceMonoFont;
 	src: url(../fonts/SpaceMono-Regular.ttf);
+    font-display: fallback;
 }
 
 * {
     box-sizing: border-box;
-    font-display: fallback;
 }
 
 /* For disabling spin box for number input */
@@ -29,7 +29,7 @@ body {
 
 .no-display
 {
-    display: none;
+    display: none;    
 }
 
 .titleSection {	
@@ -39,8 +39,9 @@ body {
 	text-align: center;	        
 }
 
-.titleSection h3 {
+.titleSection h1 {
     margin: 2%;
+    font-size: 50px;
 }
 
 .maincontainer {    
