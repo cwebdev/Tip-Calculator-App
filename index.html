@@ -15,16 +15,16 @@
   <script src="scripts/script.js"></script>
 </head>
 <body>
-  <div class="row">
+  <div class="row col-12">
     <section class="titleSection">
-      SPLITTER
+      <h3>SPLITTER</h3>
     </section>
   </div>
 
 <div class="row col-12">
   <div class="col-2 col-s-2"></div>
   <div class="maincontainer col-8 col-s-8">
-    <section class="leftSection col-6">
+    <div class="leftSection col-6">
       <div class="leftSectionInnerWrapper">
         <div class="bill col-s-12">
           <span class="billTitle divTitle">Bill</span>
@@ -32,7 +32,7 @@
             <div class="dollarSymbol">
               <img src = "images/icon-dollar.svg" alt="Dollor"/>
             </div>
-            <input type="number" value="" class="billInput inputBox"></input>
+            <input type="number" value="" class="billInput inputBox" label="billInputLabel"></input>
           </div> 
         </div>
         <div class="tip col-s-12">
@@ -45,22 +45,25 @@
             <div class="TipBox FixedTipBox" percentage="50">50%</div>
             <div class="TipBox CustomBox">
               <span class="CustomBoxText">Custom</span>
-              <input type="number" class="CustomInputBox"/>
+              <input type="number" class="CustomInputBox" label="customTipInputLabel"/>
             </div>
           </div>
         </div>
         <div class="people col-s-12">
-          <span class="peopleTitle divTitle col-s-12">Number of People</span>
+          <div class="peopleText">
+            <span class="peopleTitle divTitle col-s-6">Number of People</span>
+            <span class="peopleTitle divTitle col-s-6 peopleErrorMessage">Can't be zero</span>
+          </div>
           <div class="billInputWrapper col-s-12">
             <div class="dollarSymbol">
               <img src = "images/icon-person.svg" alt="Number of People"/>
             </div>
-            <input type="text" value="" class="peopleInput inputBox"></input>
+            <input type="text" value="" class="peopleInput inputBox" label="peopleInputLabel"></input>
           </div> 
         </div>
       </div>
-    </section>
-    <section class="rightSection col-6">
+    </div>
+    <div class="rightSection col-6">
       <div class="rightSectionOuterWrapper">
         <div class="tipAmountWrapper rightSectionDivWrapper col-s-12">
           <div class="description">
@@ -77,10 +80,10 @@
           <div class="amount">$0.00</div>
         </div>
         <div class="resetBtnWrapper col-s-12">
-          <button class="resetBtn" disabled>Reset</button>
+          <button class="resetBtn" label="resetBtnLabel" disabled>Reset</button>
         </div>
       </div>
-    </section>
+    </div>
   </div>
   <div class="col-2 col-s-2"></div>
 </div>

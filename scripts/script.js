@@ -101,6 +101,7 @@ $(function ()
     $('.peopleInput').on('keypress',validateNumber);
     $('.peopleInput').on('keyup',function(event)
     {
+        $('.peopleErrorMessage').hide();
         if($(this).val().length > 0)
         {
             totalPersons = parseInt($(this).val());
@@ -110,8 +111,10 @@ $(function ()
 
     $('.peopleInput').on('blur', function()
     {
-
-
+        if($(this).val().length > 0 && parseInt($(this).val()) == 0)
+        {
+            $('.peopleErrorMessage').show();
+        }
     });
 
 
@@ -121,6 +124,10 @@ $(function ()
         $('.TipBox').removeClass('active-Box');
         $('.billInput').val("");
         $('.peopleInput').val("");
+        $('.peopleErrorMessage').hide();
+        $('.CustomInputBox').val("");
+        $('.CustomInputBox').hide();
+        $('.CustomBoxText').show();        
         UpdateCalculations();
         $('.resetBtn').attr('disabled',true);
     });
