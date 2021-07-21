@@ -30,13 +30,13 @@ Users should be able to:
 
 ![](./Screenshot_2021-07-20.png)
 
-## Tablet Screenshot
+#### Tablet Screenshot
 
 ![](./Tablet_Screenshot_2021-07-21.png)
 
-## Mobile Screenshot
+#### Mobile Screenshot
 
-![](./Mobile_Screenshot_ 2021-07-21.png)
+![](./Mobile_Screenshot_2021-07-21.png)
 
 ### Links
 
