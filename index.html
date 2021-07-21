@@ -28,13 +28,12 @@
         <div class="leftSection col-6">
           <div class="leftSectionInnerWrapper">
             <div class="bill col-s-12">
-              <span class="billTitle divTitle">Bill</span>
+              <label class="billTitle divTitle" for="id_billInput">Bill</label>
               <div class="billInputWrapper">
                 <div class="Symbol">
                   <img src = "images/icon-dollar.svg" alt="Dollor" width="11" height="17"/>
                 </div>
-                <input type="number" value="" id="id_billInput" class="billInput js-billInput inputBox">
-                <label for="id_billInput" class="no-display">Bill</label>
+                <input type="number" value="" id="id_billInput" class="billInput js-billInput inputBox">                
               </div> 
             </div>
             <div class="tip col-s-12">
@@ -46,22 +45,20 @@
                 <div class="TipBox js-TipBox FixedTipBox" percentage="25">25%</div>
                 <div class="TipBox js-TipBox FixedTipBox" percentage="50">50%</div>
                 <div class="TipBox js-TipBox CustomBox js-CustomBox">
-                  <span class="CustomBoxText js-CustomBoxText">Custom</span>
-                  <input type="number" id="id_customTipInput" class="CustomInputBox js-CustomInputBox">
-                  <label for="id_customTipInput" class="no-display">Custom Tip</label>
+                  <label for="id_customTipInput" class="CustomBoxText js-CustomBoxText">Custom</label>
+                  <input type="number" id="id_customTipInput" class="CustomInputBox js-CustomInputBox">                  
                 </div>
               </div>
             </div>
             <div class="people col-s-12">
               <div class="peopleText">
-                <span class="peopleTitle divTitle col-s-6">Number of People</span>
+                <label class="peopleTitle divTitle col-s-6" for="id_peopleInput" >Number of People</label>
                 <span class="peopleTitle divTitle col-s-6 peopleErrorMessage js-peopleErrorMessage">Can't be zero</span>
               </div>
               <div class="billInputWrapper col-s-12">
                 <div class="Symbol">
                   <img src = "images/icon-person.svg" alt="Number of People" width="13" height="16"/>
-                </div>
-                <label for="id_peopleInput" class="no-display">Number of People</label> 
+                </div>                
                 <input type="text" value="" id="id_peopleInput" class="peopleInput js-peopleInput inputBox">
               </div> 
             </div>
@@ -84,7 +81,7 @@
               <div class="amount">$0.00</div>
             </div>
             <div class="resetBtnWrapper col-s-12">
-              <button class="resetBtn js-resetBtn" label="resetBtnLabel" disabled>Reset</button>
+              <button class="resetBtn js-resetBtn" disabled>Reset</button>
             </div>
           </div>
         </div>
