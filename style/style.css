@@ -27,6 +27,11 @@ body {
 	background-color: #C5E4E7
 }
 
+.no-display
+{
+    display: none;
+}
+
 .titleSection {	
 	font-family: spaceMonoFont;
 	font-weight: 700;
@@ -112,7 +117,7 @@ body {
     display: flex;
 }
 
-.dollarSymbol {
+.Symbol {
 	width: 5%;
 	height: 40px;
 	float: left;
