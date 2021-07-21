@@ -5,7 +5,7 @@
 
 * {
     box-sizing: border-box;
-    font-display: auto;
+    font-display: fallback;
 }
 
 /* For disabling spin box for number input */
