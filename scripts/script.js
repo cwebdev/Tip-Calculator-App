@@ -42,14 +42,18 @@ $(function ()
 {   
     UpdateCalculations();
     $('.resetBtn').attr('disabled',true);
-    
+
     $('.TipBox').on('click',function(){
         $('.TipBox').removeClass('active-Box');
         $(this).addClass('active-Box');
         if($(this).hasClass('FixedTipBox'))
         {
             tipPercentage = parseInt($(this).attr('percentage'));
+            $('.CustomInputBox').val("");
+            $('.CustomInputBox').hide();
+            $('.CustomBoxText').show();
         }
+        
         UpdateCalculations();
     });
 
@@ -59,6 +63,37 @@ $(function ()
         if($(this).val().length > 0)
         {
             billAmount = parseFloat($(this).val());
+        }
+        UpdateCalculations();
+    });
+
+    $('.CustomInputBox').on('keypress',validateFloatNumber);
+    $('.CustomBox').on('click', function(){
+        $('.CustomBoxText').hide();        
+        $('.CustomInputBox').show();
+        $('.CustomInputBox').trigger('focus');        
+    });
+
+    $('.CustomInputBox').on('keyup', function()
+    {
+        if($(this).val().length > 0)
+        {
+            tipPercentage = parseFloat($(this).val());
+        }      
+        else
+        {
+            $('.CustomInputBox').val("0");
+            tipPercentage = 0;
+        }  
+        UpdateCalculations();
+    });
+
+    $('.CustomInputBox').on('blur', function()
+    {
+        if($(this).val().length == 0)
+        {
+            $('.CustomInputBox').val("0");
+            tipPercentage = 0;
         }
         UpdateCalculations();
     });
@@ -73,6 +108,13 @@ $(function ()
         UpdateCalculations();  
     });
 
+    $('.peopleInput').on('blur', function()
+    {
+
+
+    });
+
+
     $('.resetBtn').on('click',function(){
         tipPerPerson = 0;
         totalPerPerson = 0;
@@ -81,5 +123,7 @@ $(function ()
         $('.peopleInput').val("");
         UpdateCalculations();
         $('.resetBtn').attr('disabled',true);
-    })
+    });
+
+    
 });

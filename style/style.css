@@ -127,7 +127,7 @@ body {
 	border: 1px solid transparent;
 	float: left;
 	text-align: center;
-	padding-top: 5px;
+	padding-top: 2px;
     margin: 1%;
 	border-radius: 5px;
 	background-color: #00474B;
@@ -145,6 +145,29 @@ body {
 .CustomBox {
 	background-color: hsl(189, 41%, 97%);
 	color: hsl(183, 100%, 15%);
+    padding-top:0px;
+}
+
+.CustomBoxText {
+    padding-top: 2px;
+}
+
+.CustomInputBox {
+    display: none;
+    height:28px;    
+    width: 100%;	
+	border: none;
+	background-color: transparent;
+	text-align: right;
+	font-family: spaceMonoFont;
+	font-weight: 700;
+	font-size: 20px;
+	color: hsl(183, 100%, 15%);
+}
+
+.CustomInputBox:active
+{
+    border: none;
 }
 
 .TipBox:hover {
@@ -260,7 +283,6 @@ body {
     .col-s-10 {width: 83.33%;}
     .col-s-11 {width: 91.66%;}
     .col-s-12 {width: 100%;}
-
   }
   
   @media only screen and (min-width: 1000px) {
