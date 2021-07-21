@@ -53,7 +53,9 @@ Users should be able to:
 
 ### What I learned
 
-It is beneficial to create mobile first design and then move towards desktop design providing responsive styling using CSS media query.
+- It is beneficial to create mobile first design and then move towards desktop design providing responsive styling using CSS media query.
+- HTML input tag with number type allows '-' and 'e' signs by default. Disable them if not needed in project
+
 
 ### Continued development
 

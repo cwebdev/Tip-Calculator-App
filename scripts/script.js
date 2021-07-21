@@ -15,6 +15,8 @@ function UpdateCalculations()
 
     $('.tipAmountWrapper .amount').html("$" + tipPerPerson.toFixed(2));
     $('.totalWrapper .amount').html("$" + totalPerPerson.toFixed(2));
+
+    $('.resetBtn').attr('disabled',false);
 }
 
 function validateFloatNumber(event)
@@ -39,7 +41,8 @@ function validateNumber(event)
 $(function ()
 {   
     UpdateCalculations();
-
+    $('.resetBtn').attr('disabled',true);
+    
     $('.TipBox').on('click',function(){
         $('.TipBox').removeClass('active-Box');
         $(this).addClass('active-Box');
@@ -77,5 +80,6 @@ $(function ()
         $('.billInput').val("");
         $('.peopleInput').val("");
         UpdateCalculations();
+        $('.resetBtn').attr('disabled',true);
     })
 });
