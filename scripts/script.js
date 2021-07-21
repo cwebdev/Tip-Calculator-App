@@ -1,20 +1,43 @@
+"use strict";
+
 let tipPercentage = 0;
 let billAmount = 0;
 let totalPersons = 1;
 let tipPerPerson = 0;
 let totalPerPerson = 0;
 
+$(function() {
+    UpdateCalculations();
+    $('.js-resetBtn').attr('disabled', true);
+    
+    $('.js-billInput').on('keypress', validateFloatNumber);
+    $('.js-billInput').on('keyup', processBillInputChange);
+
+    $('.js-TipBox').on('click', processTipBoxClick);
+    $('.js-CustomInputBox').on('keypress', validateFloatNumber);
+    $('.js-CustomBox').on('click', processCustomBoxClick);
+    $('.js-CustomInputBox').on('keyup', processCustomInputChange);
+    $('.js-CustomInputBox').on('blur', processCustomInputBlur);
+    
+    $('.js-peopleInput').on('keypress', validateNumber);
+    $('.js-peopleInput').on('keyup', processPeopleInputChange);     
+    $('.js-peopleInput').on('blur', processPeopleInputBlur);
+
+    $('.js-resetBtn').on('click', processResetBtnClick);
+});
+
+
 function UpdateCalculations() {
-    if ($('.billInput').val().length > 0 && $('.peopleInput').val().length > 0
+    if ($('.js-billInput').val().length > 0 && $('.js-peopleInput').val().length > 0
         && $('.active-Box').length > 0 && totalPersons != 0) {
         tipPerPerson = (billAmount * tipPercentage / 100) / totalPersons;
         totalPerPerson = (billAmount / totalPersons) + tipPerPerson;
     }
 
-    $('.tipAmountWrapper .amount').html("$" + tipPerPerson.toFixed(2));
-    $('.totalWrapper .amount').html("$" + totalPerPerson.toFixed(2));
+    $('.js-tipAmountWrapper .amount').html("$" + tipPerPerson.toFixed(2));
+    $('.js-totalWrapper .amount').html("$" + totalPerPerson.toFixed(2));
 
-    $('.resetBtn').attr('disabled', false);
+    $('.js-resetBtn').attr('disabled', false);
 }
 
 function validateFloatNumber(event) {
@@ -31,85 +54,82 @@ function validateNumber(event) {
         null : event.charCode >= 48 && event.charCode <= 57;
 }
 
-$(function() {
+function processBillInputChange()
+{
+    if ($(this).val().length > 0) {
+        billAmount = parseFloat($(this).val());
+    }
     UpdateCalculations();
-    $('.resetBtn').attr('disabled', true);
+}
 
-    $('.TipBox').on('click', function() {
-        $('.TipBox').removeClass('active-Box');
-        $(this).addClass('active-Box');
-        if ($(this).hasClass('FixedTipBox')) {
-            tipPercentage = parseInt($(this).attr('percentage'));
-            $('.CustomInputBox').val("");
-            $('.CustomInputBox').hide();
-            $('.CustomBoxText').show();
-        }
+function processTipBoxClick()
+{
+    $('.js-TipBox').removeClass('active-Box');
+    $(this).addClass('active-Box');
+    if ($(this).hasClass('FixedTipBox')) {
+        tipPercentage = parseInt($(this).attr('percentage'));
+        $('.js-CustomInputBox').val("");
+        $('.js-CustomInputBox').hide();
+        $('.js-CustomBoxText').show();
+    }
 
-        UpdateCalculations();
-    });
+    UpdateCalculations();
+}
 
-    $('.billInput').on('keypress', validateFloatNumber);
-    $('.billInput').on('keyup', function() {
-        if ($(this).val().length > 0) {
-            billAmount = parseFloat($(this).val());
-        }
-        UpdateCalculations();
-    });
+function processCustomBoxClick()
+{
+    $('.js-CustomBoxText').hide();
+    $('.js-CustomInputBox').show();
+    $('.js-CustomInputBox').trigger('focus');
+}
 
-    $('.CustomInputBox').on('keypress', validateFloatNumber);
-    $('.CustomBox').on('click', function() {
-        $('.CustomBoxText').hide();
-        $('.CustomInputBox').show();
-        $('.CustomInputBox').trigger('focus');
-    });
+function processCustomInputChange()
+{
+    if ($(this).val().length > 0) {
+        tipPercentage = parseFloat($(this).val());
+    } else {
+        $('.js-CustomInputBox').val("0");
+        tipPercentage = 0;
+    }
+    UpdateCalculations();
+}
 
-    $('.CustomInputBox').on('keyup', function() {
-        if ($(this).val().length > 0) {
-            tipPercentage = parseFloat($(this).val());
-        } else {
-            $('.CustomInputBox').val("0");
-            tipPercentage = 0;
-        }
-        UpdateCalculations();
-    });
+function processCustomInputBlur()
+{
+    if ($(this).val().length == 0) {
+        $('.js-CustomInputBox').val("0");
+        tipPercentage = 0;
+    }
+    UpdateCalculations();
+}
 
-    $('.CustomInputBox').on('blur', function() {
-        if ($(this).val().length == 0) {
-            $('.CustomInputBox').val("0");
-            tipPercentage = 0;
-        }
-        UpdateCalculations();
-    });
+function processPeopleInputChange()
+{
+    $('.js-peopleErrorMessage').hide();
+    if ($(this).val().length > 0) {
+        totalPersons = parseInt($(this).val());
+    }
+    UpdateCalculations();
+}
 
-    $('.peopleInput').on('keypress', validateNumber);
-    $('.peopleInput').on('keyup', function(event) {
-        $('.peopleErrorMessage').hide();
-        if ($(this).val().length > 0) {
-            totalPersons = parseInt($(this).val());
-        }
-        UpdateCalculations();
-    });
+function processPeopleInputBlur()
+{
+    if ($(this).val().length > 0 && parseInt($(this).val()) == 0) {
+        $('.js-peopleErrorMessage').show();
+    }
+}
 
-    $('.peopleInput').on('blur', function() {
-        if ($(this).val().length > 0 && parseInt($(this).val()) == 0) {
-            $('.peopleErrorMessage').show();
-        }
-    });
-
-
-    $('.resetBtn').on('click', function() {
-        tipPerPerson = 0;
-        totalPerPerson = 0;
-        $('.TipBox').removeClass('active-Box');
-        $('.billInput').val("");
-        $('.peopleInput').val("");
-        $('.peopleErrorMessage').hide();
-        $('.CustomInputBox').val("");
-        $('.CustomInputBox').hide();
-        $('.CustomBoxText').show();
-        UpdateCalculations();
-        $('.resetBtn').attr('disabled', true);
-    });
-
-
-});
+function processResetBtnClick()
+{
+    tipPerPerson = 0;
+    totalPerPerson = 0;
+    $('.js-TipBox').removeClass('active-Box');
+    $('.js-billInput').val("");
+    $('.js-peopleInput').val("");
+    $('.js-peopleErrorMessage').hide();
+    $('.js-CustomInputBox').val("");
+    $('.js-CustomInputBox').hide();
+    $('.CustomBoxText').show();
+    UpdateCalculations();
+    $('.js-resetBtn').attr('disabled', true);
+}
