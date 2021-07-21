@@ -17,6 +17,19 @@ function UpdateCalculations()
     $('.totalWrapper .amount').html("$" + totalPerPerson.toFixed(2));
 }
 
+function validateFloatNumber(event)
+{    
+    if(event.charCode == 8 || event.charCode == 0 || event.charCode == 13
+        || event.charCode == 101 || event.charCode == 45)
+    {
+        return false;
+    }
+    else
+    {
+        return (event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57));
+    } 
+}
+
 function validateNumber(event)
 {
     return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13)
@@ -37,6 +50,7 @@ $(function ()
         UpdateCalculations();
     });
 
+    $('.billInput').on('keypress',validateFloatNumber);
     $('.billInput').on('keyup',function()
     {
         if($(this).val().length > 0)
