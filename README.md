@@ -30,6 +30,14 @@ Users should be able to:
 
 ![](./Screenshot_2021-07-20.png)
 
+## Tablet Screenshot
+
+![](./Tablet_Screenshot_2021-07-21.png)
+
+## Mobile Screenshot
+
+![](./Mobile_Screenshot_ 2021-07-21.png)
+
 ### Links
 
 - Solution URL: [https://cwebdev.github.io/Tip-Calculator-App/](https://cwebdev.github.io/Tip-Calculator-App/)
