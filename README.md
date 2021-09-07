@@ -63,5 +63,5 @@ Would want to work more on CSS flexbox and also explore more frameworks like Nex
 
 ## Author
 
-- Website - [Chitrang Shah](https://www.chitrang.com)
-- Frontend Mentor - [@cwebdev](https://www.frontendmentor.io/profile/cwebdev)
+- Website - [Chitrang Shah](https://chitrang.webflow.io/)
+- Frontend Mentor Profile - [@cwebdev](https://www.frontendmentor.io/profile/cwebdev)
